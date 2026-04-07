@@ -10,11 +10,11 @@ to each NIP-50-supporting relay to verify actual behavior.
 
 | Relay | NIP-11 Fetched | NIP-50 in supported_nips | Test Query Response | Latency |
 |---|---|---|---|---|
-| wss://relay.nostr.band | ❌ | ❌ | N/A (NIP-11 fetch failed in this run) | ~7678ms |
-| wss://nostr.wine | ✅ | ✅ | Not executed by this helper | ~1168ms |
-| wss://relay.damus.io | ✅ | ❌ | N/A | ~1509ms |
-| wss://nos.lol | ✅ | ❌ | N/A | ~878ms |
-| wss://purplepag.es | ✅ | ❌ | N/A | ~860ms |
+| wss://relay.nostr.band | No | No | N/A (NIP-11 fetch failed in this run) | ~7678ms |
+| wss://nostr.wine | Yes | Yes | Not executed by this helper | ~1168ms |
+| wss://relay.damus.io | Yes | No | N/A | ~1509ms |
+| wss://nos.lol | Yes | No | N/A | ~878ms |
+| wss://purplepag.es | Yes | No | N/A | ~860ms |
 
 ## Recommendations
 - `nostr.wine` is a confirmed NIP-50-capable candidate in this run.
