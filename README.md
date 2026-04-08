@@ -2,6 +2,8 @@
 
 Standalone competency implementation for three Shopstr SoB tasks.
 
+These helpers are the foundation for the NIP-50 search and NIP-56 reporting work proposed for SoB 2026. `listing-search.ts` mirrors the client-side predicate behavior used for marketplace fallback and relevance checks, `relay-capabilities.ts` implements the relay evaluation flow from Task 2, and `nip56-report.ts` provides typed report-construction helpers that can be dropped into Shopstr's Nostr utility layer with minimal adaptation.
+
 ## Tasks implemented
 
 - Task 1: Pure listing search helper and Jest tests
