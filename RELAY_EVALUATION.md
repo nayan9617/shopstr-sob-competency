@@ -8,13 +8,18 @@ to reachable NIP-50-supporting relays to verify actual behavior.
 
 ## Results
 
-| Relay | NIP-11 Fetched | NIP-50 in supported_nips | Test Query Response | Latency |
+| Relay | NIP-11 Fetched | NIP-50 | Test Query | Latency |
 |---|---|---|---|---|
-| wss://relay.nostr.band | No (this run) | Unknown (runtime check) | Unreachable in this run due to local timeout; publicly known to advertise NIP-50 and should be treated as a primary candidate | ~7678ms |
-| wss://nostr.wine | Yes | Yes | Manual test with `wscat` returned kind:30402 events for query `bitcoin` | ~1168ms |
+| wss://relay.nostr.band | No ¹ | Unknown ¹ | N/A | ~7678ms |
+| wss://nostr.wine | Yes | Yes | kind:30402 events returned for `bitcoin` (wscat) | ~1168ms |
 | wss://relay.damus.io | Yes | No | N/A | ~1509ms |
 | wss://nos.lol | Yes | No | N/A | ~878ms |
 | wss://purplepag.es | Yes | No | N/A | ~860ms |
+
+¹ `relay.nostr.band` timed out in this local run (~7678ms). This is a network/runtime
+artifact — the relay is publicly known to advertise NIP-50 support and should be
+treated as a primary candidate. Re-run `npm run relay:check` on a stable connection
+to confirm.
 
 ## Recommendations
 - `nostr.wine` is a confirmed NIP-50-capable candidate in this run, including a successful manual search-filter check.
