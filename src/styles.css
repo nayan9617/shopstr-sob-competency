@@ -114,6 +114,7 @@ body {
 
 .card {
   padding: 1rem;
+  min-width: 0;
   animation: rise 220ms ease-out;
 }
 
@@ -125,6 +126,8 @@ body {
 .card p {
   margin: 0.55rem 0 0.65rem;
   min-height: 3.3em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .tag-row {
