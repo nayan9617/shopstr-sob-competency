@@ -1,6 +1,6 @@
 # shopstr-sob-competency
 
-Live Demo: https://YOUR-VERCEL-URL.vercel.app
+Live Demo: https://shopstr-competency.vercel.app/
 
 Standalone competency implementation for three Shopstr SoB tasks.
 
