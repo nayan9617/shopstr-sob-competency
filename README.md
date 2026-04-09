@@ -15,6 +15,13 @@ These helpers are the foundation for the NIP-50 search and NIP-56 reporting work
 
 ## Project structure
 
+- `package.json`
+- `index.html`
+- `vite.config.ts`
+- `src/main.tsx`
+- `src/App.tsx`
+- `src/styles.css`
+- `src/nostr/nip50-search.ts`
 - `src/search/listing-search.ts`
 - `src/search/__tests__/listing-search.test.ts`
 - `src/nostr/relay-capabilities.ts`
