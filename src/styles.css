@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink: #11253b;
+  --paper: #fffaf0;
+  --sun: #ffd166;
+  --mint: #8bd3c7;
+  --accent: #ef476f;
+  --panel: rgba(255, 255, 255, 0.78);
+  --stroke: rgba(17, 37, 59, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 0%, #ffe7a7 0%, rgba(255, 231, 167, 0) 40%),
+    radial-gradient(circle at 90% 100%, #b8f2e6 0%, rgba(184, 242, 230, 0) 35%),
+    linear-gradient(135deg, #f8f5ef 0%, #f1f0ff 100%);
+}
+
+.app-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.hero h1 {
+  margin: 0.35rem 0 0.5rem;
+  line-height: 1.05;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+}
+
+.hero p {
+  margin: 0;
+  max-width: 72ch;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: var(--panel);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.panel,
+.card {
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 14px 36px rgba(17, 37, 59, 0.09);
+}
+
+.panel {
+  padding: 1rem;
+}
+
+.field-label {
+  display: block;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.search-input,
+.relay-input,
+.report-form select,
+.report-form input {
+  width: 100%;
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.relay-input {
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 0.35rem;
+  resize: vertical;
+}
+
+.meta-row {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.error {
+  color: var(--accent);
+}
+
+.results-grid {
+  display: grid;
+  gap: 0.95rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.card {
+  padding: 1rem;
+  animation: rise 220ms ease-out;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.card p {
+  margin: 0.55rem 0 0.65rem;
+  min-height: 3.3em;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.chip {
+  border-radius: 999px;
+  background: rgba(139, 211, 199, 0.28);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.78rem;
+}
+
+.card-meta {
+  margin: 0.75rem 0;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.77rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  background: var(--ink);
+  color: white;
+  padding: 0.52rem 0.8rem;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.report-button {
+  background: linear-gradient(95deg, #113a66, #144f78);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--stroke);
+}
+
+.report-form {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.report-form label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.action-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.payload-panel pre {
+  margin: 0;
+  padding: 0.9rem;
+  border-radius: 10px;
+  background: #0f2336;
+  color: #e2f0f9;
+  overflow: auto;
+  min-height: 120px;
+  max-height: 320px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding-top: 1.15rem;
+  }
+
+  .action-row {
+    flex-direction: column;
+  }
+}
