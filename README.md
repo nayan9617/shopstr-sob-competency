@@ -64,18 +64,4 @@ You can also pass explicit relays:
 npm run relay:check -- wss://relay.nostr.band wss://nostr.wine wss://relay.damus.io
 ```
 
-## What mentors can verify quickly
 
-- Search bar triggers `searchListingsViaNip50(query, relays, signal)` with abort handling.
-- Results show raw listing data from relays in a readable card layout.
-- Clicking Report builds and signs a kind `1984` payload using `buildReportEvent`, but does not publish it.
-- `RELAY_EVALUATION.md` documents relay capability observations and recommendations.
-
-## Vercel deploy (GitHub import)
-
-- Go to Vercel and choose **Add New Project**.
-- Import `nayan9617/shopstr-sob-competency`.
-- Framework preset: `Vite` (auto-detected).
-- Build command: `npm run build`.
-- Output directory: `dist`.
-- Click Deploy and paste the generated URL into the Live Demo line at the top of this README.
